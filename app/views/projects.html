@@ -1,0 +1,29 @@
+<section class="container" ng-controller="ModalDemoCtrl as vm">
+    <div class="row">
+        <div>
+            <button type="button" class="btn btn-info" id="addProject" ng-click="vm.open()">Add Project</button>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-6">
+            <div class="span3">
+                <div class="well">
+                    <h4 class="text-info">{{vm.title}}</h4>
+                    <p><span class="label label-info">Priority</span></p>
+                    <ul>
+                        <li>Team:{{vm.members}}</li>
+                        <li>Tasks:{{vm.tasks}}</li>
+                        <li>Done:{{vm.tasksDone}}</li>
+                    </ul>
+                    <p>{{vm.description}}</p>
+                    <hr>
+                    <p><a class="btn btn-warning" ui-sref="/tasks"><i class="icon-ok"></i> View Project</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

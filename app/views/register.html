@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="wrap card-project">
+                <p class="form-title">
+                    Register</p>
+                <form class="login" name="registerForm">
+                    <input type="text" placeholder="Username" required name="username" ng-minlength="3" ng-maxlength="8" required/>
+                    <p ng-show="registerForm.username.$error.minlength" class="help-block">Username is too short.</p>
+                    <p ng-show="registerForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+                    <input type="email" placeholder="Email" required name="email" ng-model="email" />
+                    <p ng-show="registerForm.email.$invalid && !registerForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                    <input type="password" placeholder="Password" name="password" />
+
+                    <input type="submit" value="Register" class="btn btn-success btn-sm" ng-disabled="registerForm.$invalid" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
