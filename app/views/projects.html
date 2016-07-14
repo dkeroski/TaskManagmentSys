@@ -1,12 +1,15 @@
-<section class="container" ng-controller="ModalDemoCtrl as vm">
+<section class="container">
     <div class="row">
         <div>
-            <button type="button" class="btn btn-info" id="addProject" ng-click="vm.open()">Add Project</button>
+            <a ui-sref="newproject"> + add new project </a>
         </div>
     </div>
 </section>
 
+<div>{{vm.result}}
+</div>
 
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-lg-4 col-sm-6">

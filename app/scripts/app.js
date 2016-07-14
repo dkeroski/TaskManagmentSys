@@ -18,6 +18,7 @@ angular
         'ngTouch',
         'ui.router',
         'ui.bootstrap'
+
     ])
     //route config
     .config(function($stateProvider, $urlRouterProvider) {
@@ -58,7 +59,12 @@ angular
                 templateUrl: 'views/register.html',
                 controller: 'RegisterController',
                 controllerAs: 'vm'
-            });
-
+            })
+            .state('newproject', {
+                url: '/newproject',
+                templateUrl: 'views/newproject.html',
+                controller: 'NewProjectController',
+                controllerAs: 'vm'
+            })
 
     });

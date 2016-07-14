@@ -1,21 +1,50 @@
-<div ng-controller="ModalDemoCtrl as vm">
+{#
+<!-- <div>
     <div class="modal-header">
         <h3 class="modal-title">Add new project!</h3>
     </div>
 
-    <form name="addFriendForm" ng-submit="vm.submit()">
-        <input ng-model="project.title" class="form-control" type="text" placeholder="Title" />
-        <textarea ng-model="project.description" class="form-control" type="text" placeholder="Descriptions" ng-minlength="10" ng-maxlength="100" />
-
-        <div id="datetimepicker1" class="input-append date">
-            <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>
-            <span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
-        </div>
-    </form>
+    <div class="modal-body">
+        <form name="addProjectForm">
+            <input ng-model="vm.title" class="form-control" type="text" placeholder="Title" />
+            <textarea ng-model="vm.description" class="form-control" type="text" placeholder="Description" ng-minlength="10" ng-maxlength="100" />
+        </form>
+    </div>
 
     <div class="modal-footer">
-        <button type="submit" class="btn btn-info">Save</button>
+        <button type="submit" ng-click="vm.submit()" class="btn btn-info">Save</button>
         <button class="btn btn-warning" ng-click="vm.cancel()">Cancel</button>
     </div>
 
-</div>
+</div> -->
+
+<div class="modal-content">
+
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="vm.cancel()" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">{{vm.title}}</h4>
+    </div>
+
+    <div class="modal-body">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Title</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="title" placeholder="Project Title" ng-model="project.title">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="age" class="col-sm-2 control-label">Age</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" placeholder="Project Description" ng-model="project.description"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" ng-click="vm.submit()" class="btn btn-info" data-dismiss="modal"> Add </button>
+        <button type="button" ng-click="vm.cancel()" class="btn btn-warning">Cancel</button>
+    </div>
+
+</div>#}

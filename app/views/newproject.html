@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="vm.cancel()" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">{{vm.title}}</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="title" class="col-sm-2 control-label">Title</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="title" placeholder="Project Title" ng-model="vm.title">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-sm-2 control-label"> Description </label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" placeholder="Project Description" ng-model="vm.description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="menager" class="col-sm-2 control-label">Project Menager</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="title" placeholder="Project Title" ng-model="vm.menager">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="title" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="title" placeholder="Project Title">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" ng-click="vm.submit()" class="btn btn-info"> Add </button>
+                <button type="button" ng-click="vm.cancel()" class="btn btn-warning">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

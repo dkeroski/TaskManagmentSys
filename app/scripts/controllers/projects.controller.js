@@ -5,11 +5,12 @@
         .module('taskmgnApp')
         .controller('ProjectsController', ProjectsController);
 
-    ProjectsController.$inject = [];
+    ProjectsController.$inject = ['projectService'];
 
-    function ProjectsController() {
+    function ProjectsController(projectService) {
         var vm = this;
-        vm.projects = [];
+        //call service for get all projects in list
+        vm.projects = projectService.getProjects();
 
     }
 })();
